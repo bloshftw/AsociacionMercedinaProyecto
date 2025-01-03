@@ -222,9 +222,9 @@ nav ul li a:hover {
 /*SECCION HERO*/
 .hero {
   position: relative;
-  height: auto;
+  height: 300px;
   /* Ocupa el 100% de la altura de la ventana */
-  background-image: url('/assets/images/banner.jpg');
+  background-image: url('/assets/images/banners/img3.jpg');
   /* Cambia el nombre del archivo por el correcto */
   background-size: cover;
   /* Asegura que la imagen cubra todo el contenedor */
@@ -339,12 +339,226 @@ nav ul li a:hover {
 /* Media query para dispositivos móviles */
 /*SECCION TARJETAS*/
 
+
+
+/*SECCION SPONSORS*/
+
+/* Estilos para la sección de sponsors */
+.sponsors-section {
+  padding: 4rem 2rem;
+  background-color: #1a1a1a;
+  position: relative;
+  background-image: url('../assets/images/banners/sponsors.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.sponsors-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(26, 26, 26, 0.6);
+}
+
+.sponsors-content {
+  position: relative;
+  max-width: 1000px; /* Reducido de 1200px */
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+}
+
+.sponsors-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem; /* Reducido de 1.5rem */
+  color: white;
+}
+
+.sponsors-description {
+  font-size: 1.1rem; /* Reducido de 1.2rem */
+  line-height: 1.6;
+  margin-bottom: 2rem; /* Reducido de 3rem */
+  max-width: 600px; /* Reducido de 800px */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sponsors-benefits {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem; /* Reducido de 1.5rem */
+  margin-bottom: 2rem; /* Reducido de 3rem */
+}
+
+.benefit-item {
+  padding: 1.5rem; /* Reducido de 2rem */
+  background-color: rgba(36, 36, 36, 0.9);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  font-size: 2rem; /* Reducido de 2.5rem */
+  color: #4CAF50;
+  margin-bottom: 1rem; /* Reducido de 1.5rem */
+}
+
+.benefit-item h3 {
+  font-size: 1.1rem; /* Reducido de 1.25rem */
+  margin-bottom: 0.75rem; /* Reducido de 1rem */
+  color: #4CAF50;
+}
+
+.benefit-item p {
+  color: #e0e0e0;
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.sponsor-button {
+  display: inline-block;
+  padding: 0.875rem 1.75rem; /* Reducido de 1rem 2rem */
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid #4CAF50;
+  font-size: 1rem; /* Reducido de 1.1rem */
+}
+
+.sponsor-button:hover {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+}
+
+/* Media query para tablets */
+@media (min-width: 768px) {
+  .sponsors-benefits {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media query para escritorio */
+@media (min-width: 1024px) {
+  .sponsors-section {
+    padding: 3rem 2rem; /* Reducido de 4rem 2rem */
+  }
+
+  .sponsors-benefits {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+  
+  .benefit-item {
+    height: 100%;
+    justify-content: flex-start;
+  }
+}
+
+/*SECCION SPONSORS*/
+
+
+
+/*SECCION LOGOS CARRUSEL*/
+/* Estilos para el título */
+.carousel-title {
+  height:auto;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Estilos para el carrusel de logos */
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 20px 0;
+  background: white;
+  position: relative; /* Aseguramos que los pseudo-elementos se posicionen correctamente */
+}
+
+.logo-track {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  gap: 40px;
+}
+
+.logo-slide {
+  flex: 0 0 auto;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-150px * 6 - 40px * 6));
+  }
+}
+
+/* Gradientes para efecto de desvanecimiento en los bordes */
+.carousel-container::before,
+.carousel-container::after {
+  content: "";
+  position: absolute;
+  width: 50px; /* Reducido de 100px a 50px */
+  height: 100%;
+  top: 0;
+  z-index: 2;
+  pointer-events: none; /* Permite que los eventos del mouse pasen a través */
+}
+
+.carousel-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.carousel-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+/*SECCION LOGOS CARRUSEL*/
+
 /*SECCION BANNER*/
 .purpose-section {
   width: 100%;
   background-color: #1a1919;
   /* Fondo claro para resaltar el contenedor */
   padding: 40px 0;
+  margin-top: 25px;
 }
 
 .container {
@@ -387,6 +601,10 @@ nav ul li a:hover {
 
 /* Estilo de contenedor para dispositivos pequeños */
 @media (max-width: 768px) {
+.purpose-section{
+  max-height: 600px;
+}
+
   .logos {
     flex-direction: column;
     text-align: center;
