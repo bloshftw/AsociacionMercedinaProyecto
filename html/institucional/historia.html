@@ -5,66 +5,96 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <!--CSS-->
       <link rel="stylesheet" href="/css/stylesheet.css">
-      <link rel="stylesheet" href="/css/institucional/institucional.css">
       <!--CSS-->
       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
       <title>Institucion AMV</title>
   </head>
   <body>
     <header class="header">
-      <nav>
+      <nav class="nav-container">
           <div class="logo">
-            <img src="/assets/images/logo.jpg" alt="Logo" />
+              <img src="/assets/images/logo.jpg" alt="Logo AMV">
+              <span>Asociación Mercedina de Voleibol</span>
           </div>
-          <ul>
-            <li>
-              <a href="#index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="./html/institucional/institucional.html">Institucional</a>
-            </li>
-            <li>
-              <a href="#">Descargas</a>
-            </li>
-            <li>
-              <a href="#">Competencias</a>
-            </li>
-            <li>
-              <a href="#">Aranceles 2025</a>
-            </li>
-            <li>
-              <a href="#">Contacto</a>
-            </li>
-          </ul>
           <div class="hamburger">
-            <span class="line"></span>
-            <span class="line"></span>
-            <span class="line"></span>
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+          <ul class="main-menu">
+              <li><a href="/index.html">Inicio</a></li>
+              <li class="has-submenu">
+                  <a href="#">Institucional</a>
+                  <ul class="submenu">
+                      <li><a href="/html/institucional/historia.html">Historia</a></li>
+                      <li><a href="/html/institucional/misionVisionyValores.html">Visión y Misión</a></li>
+                      <li><a href="/html/institucional/miembros.html">Autoridades</a></li>
+                      <li><a href="/html/institucional/clubesAsociados.html">Instituciones Afiliadas</a></li>
+                  </ul>
+              </li>
+              <li class="has-submenu">
+                  <a href="#o">Oficina Virtual</a>
+                  <ul class="submenu">
+                      <li><a href="#programacion">Programación</a></li>
+                      <li><a href="#fixtures">Fixtures</a></li>
+                      <li><a href="#boletines">Boletines</a></li>
+                      <li><a href="https://drive.google.com/drive/folders/15njA6xH10RWfqCEteB-zeGFzXARMum29" target="_blank">Formularios</a></li>
+                      <li><a href="https://drive.google.com/drive/folders/13WysgbXBtD9rcVG9zFsrVr1S4jOvMtts" target="_blank">Reglamento</a></li>
+                  </ul>
+              </li>
+              <li class="has-submenu">
+                  <a href="#competencias">Competencias</a>
+                  <ul class="submenu">
+                      <li class="has-submenu">
+                          <a href="#a1-masculino">A1 Masculino</a>
+                          <ul class="submenu">
+                              <li><a href="#a1-masculino-programacion">Programación</a></li>
+                              <li><a href="#a1-masculino-fixture">Fixture</a></li>
+                              <li><a href="#a1-masculino-tabla">Tabla de posiciones</a></li>
+                          </ul>
+                      </li>
+                      <li class="has-submenu">
+                          <a href="#a1-femenino">A1 Femenino</a>
+                          <ul class="submenu">
+                              <li><a href="#a1-femenino-programacion">Programación</a></li>
+                              <li><a href="#a1-femenino-fixture">Fixture</a></li>
+                              <li><a href="#a1-femenino-tabla">Tabla de posiciones</a></li>
+                          </ul>
+                      </li>
+                      <li class="has-submenu">
+                          <a href="#a2-masculino">A2 Masculino</a>
+                          <ul class="submenu">
+                              <li><a href="#a2-masculino-programacion">Programación</a></li>
+                              <li><a href="#a2-masculino-fixture">Fixture</a></li>
+                              <li><a href="#a2-masculino-tabla">Tabla de posiciones</a></li>
+                          </ul>
+                      </li>
+                      <li class="has-submenu">
+                          <a href="#a2-femenino">A2 Femenino</a>
+                          <ul class="submenu">
+                              <li><a href="#a2-femenino-programacion">Programación</a></li>
+                              <li><a href="#a2-femenino-fixture">Fixture</a></li>
+                              <li><a href="#a2-femenino-tabla">Tabla de posiciones</a></li>
+                          </ul>
+                      </li>
+                      <li class="has-submenu">
+                          <a href="#a3">A3</a>
+                          <ul class="submenu">
+                              <li><a href="#a3-programacion">Programación</a></li>
+                              <li><a href="#a3-fixture">Fixture</a></li>
+                              <li><a href="#a3-tabla">Tabla de posiciones</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+              <li><a href="#">Aranceles 2025</a></li>
+          </ul>
+          <div class="social-icons">
+              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
           </div>
       </nav>
-        <div class="menubar">
-          <ul>
-            <li>
-              <a href="/index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="/html/institucional/institucional.html">Institucional</a>
-            </li>
-            <li>
-              <a href="#">Descargas</a>
-            </li>
-            <li>
-              <a href="#">Competencias</a>
-            </li>
-            <li>
-              <a href="#">Aranceles 2025</a>
-            </li>
-            <li>
-              <a href="#">Contacto</a>
-            </li>
-          </ul>
-        </div>
-    </header>
+  </header>
 
     <main>
       <div class="containerHistoria">
@@ -73,13 +103,13 @@
             <p>XXXXXXXXXXXXXXXXXXX</p>
 
             <div class="section">
-              <h2 class="section-title">Los Primeros Pasos</h2>
-              <p class="paragraph">Con el deseo de regularizar los partidos amistosos que se venían disputando entre distintas instituciones de la ciudad, los fundadores de la Federación Cordobesa pusieron las primeras semillas del deporte en La Docta. El 15 de junio de 1965, en la sede de la Dirección de Educación Física de la Universidad Nacional de Córdoba, se labró el acta de la Federación Cordobesa de Voleibol y Pelota al Cesto. Ante la paulatina desaparición del primer ente rector del voleibol mediterráneo, la Federación, estaba apuntalada por la Dirección de Educación Física, cuyo vice director, el Prof. Germán Shroeder, se convirtió en el primer Presidente de la reciente institución. Junto a Daniel Reynoso Arce, fundador y luego presidente de la institución, juntan un grupo de gente que estaba haciendo voleibol y así se formó la base de lo que hoy conocemos como la Federación Cordobesa de Voleibol.</p>
+              <h2 class="section-title">Nuestros primeros pasos</h2>
+              <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, qui vel ipsam error rerum, labore ad rem fugit aut iste unde. Ratione quos assumenda doloremque perferendis vero accusantium commodi sit?</p>
             </div>
         
             <div class="section">
               <h2 class="section-title">El Crecimiento</h2>
-              <p class="paragraph">A lo largo de los años, la Federación ha crecido en número de clubes y jugadores, promoviendo el voley en todas sus formas y categorías. Se han realizado numerosos torneos y campeonatos que han permitido a los jugadores desarrollarse y competir a niveles más altos.</p>
+              <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti voluptate delectus, facilis minus ad facere nobis voluptatem vero perferendis amet suscipit, possimus, sit sapiente laboriosam totam dolores earum animi? Vel.</p>
             </div>
 
             <div class="section">
