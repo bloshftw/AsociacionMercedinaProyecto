@@ -1,65 +1,76 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger');
-  const menubar = document.querySelector('.menubar');
-  const hasSubmenuItems = document.querySelectorAll('.has-submenu');
+  const mainMenu = document.querySelector('.main-menu');
+  const hasSubmenu = document.querySelectorAll('.has-submenu');
 
-  // Manejo de la hamburguesa
-  hamburger.addEventListener('click', function () {
-    this.classList.toggle('hamburger-active');
-    menubar.classList.toggle('active');
+  // Toggle menú hamburguesa
+  hamburger.addEventListener('click', function() {
+      mainMenu.classList.toggle('active');
   });
 
-  // Función para alternar los submenús
-  function toggleSubmenu(e) {
-    const submenu = this.querySelector('.submenu');
-    const link = this.querySelector('a');
-
-    if (submenu) {
-      // Evita la acción predeterminada solo si el submenú está presente
-      e.preventDefault();
-
-      // Cierra otros submenús abiertos
-      hasSubmenuItems.forEach(item => {
-        const itemSubmenu = item.querySelector('.submenu');
-        const itemLink = item.querySelector('a');
-        if (item !== this && itemSubmenu) {
-          itemSubmenu.classList.remove('active');
-          itemLink.classList.remove('active');
-        }
+  // Función para cerrar todos los submenús
+  function closeAllSubmenus() {
+      document.querySelectorAll('.submenu.active').forEach(submenu => {
+          submenu.classList.remove('active');
       });
-
-      // Alterna el estado del submenú actual
-      submenu.classList.toggle('active');
-      link.classList.toggle('active');
-    }
+      document.querySelectorAll('.has-submenu > a.active').forEach(item => {
+          item.classList.remove('active');
+      });
   }
 
-  // Asigna eventos a los elementos con submenús
-  hasSubmenuItems.forEach(item => {
-    item.addEventListener('click', toggleSubmenu);
-    item.addEventListener('touchstart', toggleSubmenu); // Soporte para dispositivos táctiles
-  });
+  // Manejar submenús en dispositivos móviles
+  hasSubmenu.forEach(item => {
+      const link = item.querySelector('a');
+      const submenu = item.querySelector('.submenu');
+      
+      link.addEventListener('click', function(e) {
+          if (window.innerWidth <= 768) {
+              e.preventDefault();
+              e.stopPropagation(); // Previene que el evento se propague al elemento padre
 
-  // Cierra los submenús al hacer clic fuera, excepto si haces clic en un submenú
-  document.addEventListener('click', function (e) {
-    if (!e.target.closest('.has-submenu') && !e.target.closest('.submenu')) {
-      hasSubmenuItems.forEach(item => {
-        const submenu = item.querySelector('.submenu');
-        const link = item.querySelector('a');
-        if (submenu) submenu.classList.remove('active');
-        if (link) link.classList.remove('active');
+              if (submenu.classList.contains('active')) {
+                  // Si el submenú está abierto, lo cerramos
+                  submenu.classList.remove('active');
+                  this.classList.remove('active');
+              } else {
+                  // Si el submenú está cerrado, cerramos todos los demás y abrimos este
+                  closeAllSubmenus();
+                  submenu.classList.add('active');
+                  this.classList.add('active');
+              }
+          }
       });
-    }
+
+      // Maneja clics en elementos del submenú para evitar que se cierre inmediatamente
+      submenu.addEventListener('click', function(e) {
+          e.stopPropagation();
+      });
   });
 
-  // Evitar que los clics en enlaces de submenús cierren el menú
-  const submenuLinks = document.querySelectorAll('.submenu a');
-  submenuLinks.forEach(link => {
-    link.addEventListener('click', function (e) {
-      e.stopPropagation(); // Detiene la propagación del evento al documento
-    });
+  // Cerrar menú al hacer clic fuera de él
+  document.addEventListener('click', function(e) {
+      if (!mainMenu.contains(e.target) && !hamburger.contains(e.target)) {
+          mainMenu.classList.remove('active');
+          closeAllSubmenus();
+      }
+  });
+
+  // Ajustar menú en resize
+  window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+          mainMenu.classList.remove('active');
+          closeAllSubmenus();
+      }
   });
 });
+
+
+
+
+
+
+
+
 
 
 /* CARRUSEL */
