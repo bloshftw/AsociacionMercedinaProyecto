@@ -71,7 +71,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+/* CARRUSEL */ 
+ // HERO
+ document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
 
+  function nextSlide() {
+      // Quitar clase active del slide actual
+      slides[currentSlide].classList.remove('active');
+      
+      // Calcular siguiente slide
+      currentSlide = (currentSlide + 1) % slides.length;
+      
+      // Añadir clase active al nuevo slide
+      slides[currentSlide].classList.add('active');
+  }
+
+  // Cambiar slide cada 5 segundos
+  setInterval(nextSlide, 5000);
+});
+// HERO
 
 /* CARRUSEL */
 

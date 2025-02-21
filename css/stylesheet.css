@@ -199,52 +199,107 @@ body {
 
 /*MENU Y HAMBURGUESA*/
 
-/*SECCION HERO*/
-.hero {
+/*HERO*/
+.hero-section {
   position: relative;
-  height: 300px;
-  background-image: url('/assets/images/banners/img3.jpg');
-  background-size: cover;
-  /* Asegura que la imagen cubra todo el contenedor */
-  background-position: center;
-  /* Centra la imagen */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* Centra el contenido horizontalmente */
-  align-items: center;
-  /* Centra el contenido verticalmente */
-  text-align: center;
-  /* Centra el texto */
-  padding: 0 20px;
-  color: white;
-  /* Color del texto */
+  height: 60vh;
+  width: 100%;
+  overflow: hidden;
 }
 
-.hero .hero-texto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+.carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slides {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
-
-.hero .title-baner {
-  font-size: 3rem;
-  color: #ffd700;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding-top: 30px;
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-/*SECCION HERO*/
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
 
-/*TITULO ASOCIACION MERCEDINA*/
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
 
-/*TITULO ASOCIACION MERCEDINA*/
+.cta-button {
+  padding: 1rem 2rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px){
+  .hero-section {
+    position: relative;
+    height:85vh;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+
+/*HERO*/
 
 /*SECCION TARJETAS*/
 /* Estilos para las tarjetas */
