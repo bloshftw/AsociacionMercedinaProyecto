@@ -203,9 +203,7 @@ body {
 .hero {
   position: relative;
   height: 300px;
-  /* Ocupa el 100% de la altura de la ventana */
   background-image: url('/assets/images/banners/img3.jpg');
-  /* Cambia el nombre del archivo por el correcto */
   background-size: cover;
   /* Asegura que la imagen cubra todo el contenedor */
   background-position: center;
@@ -232,16 +230,6 @@ body {
   z-index: 1;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  color: #ffffff;
-  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  position: relative;
-  top: 50px;
-
-}
 
 .hero .title-baner {
   font-size: 3rem;
@@ -254,6 +242,9 @@ body {
 
 /*SECCION HERO*/
 
+/*TITULO ASOCIACION MERCEDINA*/
+
+/*TITULO ASOCIACION MERCEDINA*/
 
 /*SECCION TARJETAS*/
 /* Estilos para las tarjetas */
