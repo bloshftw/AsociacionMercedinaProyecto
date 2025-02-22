@@ -723,7 +723,8 @@ footer {
   flex-wrap: wrap;
   margin-top: auto;
   background-color: #2d2e33;
-  padding: 60px 5%;
+  padding-top: 60px;
+  padding-bottom: 40px;
   gap: 0rem;
 }
 
@@ -875,5 +876,21 @@ ul li a:hover {
     font-size: 16px;
   }
 }
+
+/*DEVELOPERS TEXT*/
+.developers-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.developers-text p{
+  font-size: 22px;
+  color: #bdb6b6;
+
+}
+
+/*DEVELOPERS TEXT*/
 
 /* FOOTER */
