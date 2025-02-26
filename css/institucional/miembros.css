@@ -1,0 +1,80 @@
+/* SECCION AUTORIDADES */
+.authorities-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Fondo suave para la sección */
+  }
+  
+  .authorities-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .authorities-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--rojo);
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .authorities-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .authority-item {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .authority-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .authority-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--rojo);
+    margin-bottom: 10px;
+  }
+  
+  .authority-role {
+    font-size: 1.4rem;
+    color: var(--gris);
+    font-weight: 600;
+    opacity: 0.8;
+  }
+  
+  .authority-item:hover .authority-name {
+    color: var(--dorado); /* Cambiar el color al pasar el ratón */
+  }
+  
+  .authority-item:hover .authority-role {
+    opacity: 1; /* Resalta el texto al pasar el ratón */
+  }
+  
+  /* Media Queries - Version Móvil */
+  @media (max-width: 768px) {
+    .authorities-title {
+      font-size: 2rem;
+    }
+  
+    .authorities-list {
+      grid-template-columns: 1fr; /* Una columna en dispositivos pequeños */
+    }
+  
+    .authority-name {
+      font-size: 1.6rem;
+    }
+  
+    .authority-role {
+      font-size: 1.2rem;
+    }
+  }
+  

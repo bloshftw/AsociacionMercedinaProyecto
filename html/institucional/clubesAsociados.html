@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--CSS-->
+    <link rel="stylesheet" href="/css/stylesheet.css">
     <link rel="stylesheet" href="/css/institucional/clubesAsociados.css">
     <!--Fuente google fonts-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -11,91 +13,99 @@
 </head>
 
 <body>
+  <!--Menu de navegacion-->
   <header class="header">
     <nav class="nav-container">
         <div class="logo">
-            <img src="/assets/images/logo.jpg" alt="Logo AMV">
+            <img src="/assets/images/iconos/logoAMV.png" alt="Logo AMV">
             <span>Asociación Mercedina de Voleibol</span>
         </div>
-        <div class="hamburger">
+        
+        <button class="mobile-toggle" aria-label="Menú">
             <span></span>
             <span></span>
             <span></span>
-        </div>
-        <ul class="main-menu">
-            <li><a href="/index.html">Inicio</a></li>
-            <li class="has-submenu">
-                <a href="#">Institucional</a>
-                <ul class="submenu">
-                    <li><a href="/html/institucional/historia.html">Historia</a></li>
-                    <li><a href="/html/institucional/misionVisionyValores.html">Visión y Misión</a></li>
-                    <li><a href="/html/institucional/miembros.html">Autoridades</a></li>
-                    <li><a href="/html/institucional/clubesAsociados.html">Instituciones Afiliadas</a></li>
-                </ul>
-            </li>
-            <li class="has-submenu">
-                <a href="#o">Oficina Virtual</a>
-                <ul class="submenu">
-                    <li><a href="#programacion">Programación</a></li>
-                    <li><a href="#fixtures">Fixtures</a></li>
-                    <li><a href="#boletines">Boletines</a></li>
-                    <li><a href="https://drive.google.com/drive/folders/15njA6xH10RWfqCEteB-zeGFzXARMum29" target="_blank">Formularios</a></li>
-                    <li><a href="https://drive.google.com/drive/folders/13WysgbXBtD9rcVG9zFsrVr1S4jOvMtts" target="_blank">Reglamento</a></li>
-                </ul>
-            </li>
-            <li class="has-submenu">
-                <a href="#competencias">Competencias</a>
-                <ul class="submenu">
-                    <li class="has-submenu">
-                        <a href="#a1-masculino">A1 Masculino</a>
-                        <ul class="submenu">
-                            <li><a href="#a1-masculino-programacion">Programación</a></li>
-                            <li><a href="#a1-masculino-fixture">Fixture</a></li>
-                            <li><a href="#a1-masculino-tabla">Tabla de posiciones</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-submenu">
-                        <a href="#a1-femenino">A1 Femenino</a>
-                        <ul class="submenu">
-                            <li><a href="#a1-femenino-programacion">Programación</a></li>
-                            <li><a href="#a1-femenino-fixture">Fixture</a></li>
-                            <li><a href="#a1-femenino-tabla">Tabla de posiciones</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-submenu">
-                        <a href="#a2-masculino">A2 Masculino</a>
-                        <ul class="submenu">
-                            <li><a href="#a2-masculino-programacion">Programación</a></li>
-                            <li><a href="#a2-masculino-fixture">Fixture</a></li>
-                            <li><a href="#a2-masculino-tabla">Tabla de posiciones</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-submenu">
-                        <a href="#a2-femenino">A2 Femenino</a>
-                        <ul class="submenu">
-                            <li><a href="#a2-femenino-programacion">Programación</a></li>
-                            <li><a href="#a2-femenino-fixture">Fixture</a></li>
-                            <li><a href="#a2-femenino-tabla">Tabla de posiciones</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-submenu">
-                        <a href="#a3">A3</a>
-                        <ul class="submenu">
-                            <li><a href="#a3-programacion">Programación</a></li>
-                            <li><a href="#a3-fixture">Fixture</a></li>
-                            <li><a href="#a3-tabla">Tabla de posiciones</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <li><a href="#">Aranceles 2025</a></li>
-        </ul>
-        <div class="social-icons">
-            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        </button>
+        
+        <div class="nav-wrapper">
+            <ul class="main-menu">
+                <li><a href="/index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Institucional <i class="dropdown-icon"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/html/institucional/historia.html">Historia</a></li>
+                        <li><a href="/html/institucional/misionVisionyValores.html">Visión y Misión</a></li>
+                        <li><a href="/html/institucional/miembros.html">Autoridades</a></li>
+                        <li><a href="/html/institucional/clubesAsociados.html">Instituciones Afiliadas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Oficina Virtual <i class="dropdown-icon"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#programacion">Programación</a></li>
+                        <li><a href="#fixtures">Fixtures</a></li>
+                        <li><a href="#boletines">Boletines</a></li>
+                        <li><a href="https://drive.google.com/drive/folders/15njA6xH10RWfqCEteB-zeGFzXARMum29" target="_blank">Formularios</a></li>
+                        <li><a href="https://drive.google.com/drive/folders/13WysgbXBtD9rcVG9zFsrVr1S4jOvMtts" target="_blank">Reglamento</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Competencias <i class="dropdown-icon"></i></a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">A1 Masculino <i class="dropdown-icon"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#a1-masculino-programacion">Programación</a></li>
+                                <li><a href="#a1-masculino-fixture">Fixture</a></li>
+                                <li><a href="#a1-masculino-tabla">Tabla de posiciones</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">A1 Femenino <i class="dropdown-icon"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#a1-femenino-programacion">Programación</a></li>
+                                <li><a href="#a1-femenino-fixture">Fixture</a></li>
+                                <li><a href="#a1-femenino-tabla">Tabla de posiciones</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">A2 Masculino <i class="dropdown-icon"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#a2-masculino-programacion">Programación</a></li>
+                                <li><a href="#a2-masculino-fixture">Fixture</a></li>
+                                <li><a href="#a2-masculino-tabla">Tabla de posiciones</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">A2 Femenino <i class="dropdown-icon"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#a2-femenino-programacion">Programación</a></li>
+                                <li><a href="#a2-femenino-fixture">Fixture</a></li>
+                                <li><a href="#a2-femenino-tabla">Tabla de posiciones</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">A3 <i class="dropdown-icon"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#a3-programacion">Programación</a></li>
+                                <li><a href="#a3-fixture">Fixture</a></li>
+                                <li><a href="#a3-tabla">Tabla de posiciones</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Aranceles 2025</a></li>
+            </ul>
+            
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </nav>
 </header>
+
+<!--Menu de navegacion-->
 
   <!--SECCION INSTITUCIONES AFILIADAS-->
 <h2>Instituciones Afiliadas</h2>
@@ -115,7 +125,7 @@
             <td>DEFENSORES DEL ESTE</td>
             <td>Bº Jardín del Sur Mzn 6014</td>
             <td>(0341) 12345678</td>
-            <td><img src="/assets/images/logos clubes/1.jpg" alt="Logo CSDC" width="50"></td> <!-- Logo de la institución -->
+            <td><img src="/assets/images/logos-clubes/defe.jpg" alt="Logo DEFENSORES DEL ESTE" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -123,7 +133,7 @@
             <td>UDAV</td>
             <td>Eleodoro Lobos y Balcarce</td>
             <td>(0341) 12345678</td>
-            <td><img src="/assets/images/logos clubes/2.png" alt="Logo CSDC" width="50"></td> <!-- Logo de la institución -->
+            <td><img src="/assets/images/logos-clubes/udav.png" alt="Logo udav" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -131,7 +141,7 @@
             <td>ICA SPORTS</td>
             <td>Lavalle 936</td>
             <td>(0341) 4396652</td>
-            <td><img src="/assets/images/logos clubes/3.png" alt="Logo ASC" width="50"></td> <!-- Logo de la institución -->
+            <td><img src="/assets/images/logos-clubes/ica.png" alt="Logo ICA" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -139,7 +149,7 @@
             <td>CLUB SOCIAL Y DEPORTIVO COMERCIO</td>
             <td>Av Colombres 1610</td>
             <td>(0341) 4547775</td>
-            <td><img src="/assets/images/logos clubes/4.jpg" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+            <td><img src="/assets/images/logos-clubes/comercio.jpg" alt="Logo COMERCIO VOLEY" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -147,7 +157,7 @@
           <td>SAN MARTIN</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/5.png" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/sanMartin.png" alt="Logo SAN MARTIN" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -155,7 +165,7 @@
           <td>LAS AMIGAS</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/6.png" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/lasAmigas.png" alt="Logo AMIGAS" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -163,15 +173,15 @@
           <td>HURACAN</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/7.png" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/huracan.png" alt="Logo HURACAN" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
           <td>BAN</td>
-          <td>ALIANZA SPORTIVO LIBERTAS</td>
+          <td>ALIANZA SPORTIVO LIBERTAD</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/8.png" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/alianza.png" alt="Logo ALIANZA" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -179,7 +189,7 @@
           <td>VIKINGOS</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/9.png" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/vikingos.png" alt="Logo VIKINGOS" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -187,7 +197,7 @@
           <td>SAN JOSE VOLEY</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/10.png" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/sanJose.png" alt="Logo SAN JOSE" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -195,7 +205,7 @@
           <td>NEWBERY</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/11.png" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/newbery.png" alt="Logo NEWBERY" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -203,7 +213,7 @@
           <td>SOCIEDAD RECREATIVA HIJITUS</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/12.png" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/hijitus.png" alt="Logo HIJITUS" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -211,7 +221,7 @@
           <td>PANCHOS VOLEY</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/13.png" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/panchos.png" alt="Logo PANCHOS" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -219,7 +229,7 @@
           <td>SHARKS</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/14.png" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/sharks.png" alt="Logo SHARKS" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -227,7 +237,7 @@
           <td>TERRA</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/15.png" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/terra.png" alt="Logo TERRA" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -235,7 +245,7 @@
           <td>TOX</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/16.png" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/tox.png" alt="Logo TOX" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -243,7 +253,7 @@
           <td>SPA</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/17.jpg" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/spa.jpg" alt="Logo SPA" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -251,7 +261,7 @@
           <td>LIBER</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/18.jpg" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/liber.png" alt="Logo LIBER" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -259,7 +269,7 @@
           <td>CLUB ATLETICO PRINGLES JD</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/19.jpg" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/pringles.png" alt="Logo PRINGLES" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -267,7 +277,7 @@
           <td>SOLOMA</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/20.jpg" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/soloma.jpg" alt="Logo SOLOMA" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -275,7 +285,7 @@
           <td>LOBAS</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/21.png" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/lobas.png" alt="Logo LOBAS" width="50"></td> <!-- Logo de la institución -->
         </tr>
 
         <tr class="red-row">
@@ -283,7 +293,7 @@
           <td>STIA</td>
           <td>Av Colombres 1610</td>
           <td>(0341) 4547775</td>
-          <td><img src="/assets/images/logos clubes/22.jpg" alt="Logo BAN" width="50"></td> <!-- Logo de la institución -->
+          <td><img src="/assets/images/logos-clubes/stia.jpg" alt="Logo STIA" width="50"></td> <!-- Logo de la institución -->
         </tr>
         <!-- Puedes agregar más filas con logos aquí -->
     </tbody>
@@ -308,47 +318,53 @@
 <!--FOOTER-->
 <footer>
   <div class="footer-logo">
-      <img src="/assets/images/logo.jpg" alt="logo asociacion">
+    <img src="/assets/images/iconos/logoAMVconfondo.jpg" alt="logo asociacion">
   </div>
 
   <div class="footer-col">
-      <h4>Inicio</h4>
-      <ul>
-          <li><a href="#">Competencias</a></li>
-          <li><a href="#">Aranceles 2025</a></li>
-          <li><a href="#">Sección libre</a></li>
-      </ul>
+    <h4>Inicio</h4>
+    <ul>
+      <li><a href="#">Competencias</a></li>
+      <li><a href="#">Aranceles 2025</a></li>
+    </ul>
   </div>
 
   <div class="footer-col">
-      <h4>Institucional</h4>
-      <ul>
-          <li><a href="#">Historia</a></li>
-          <li><a href="#">Misión y Valores</a></li>
-          <li><a href="#">Autoridades</a></li>
-          <li><a href="#">Sección libre</a></li>
-      </ul>
+    <h4>Institucional</h4>
+    <ul>
+      <li><a href="../institucional/historia.html">Historia</a></li>
+      <li><a href="../institucional/misionVisionyValores.html">Visión y Misión</a></li>
+      <li><a href="../institucional/miembros.html">Autoridades</a></li>
+      <li><a href="../institucional/clubesAsociados.html">Instituciones afiliadas</a></li>
+    </ul>
   </div>
 
   <div class="footer-col">
-      <h4>Descargas</h4>
-      <ul>
-          <li><a href="#">Formularios</a></li>
-          <li><a href="#">Documentos</a></li>
-          <li><a href="#">Reglamento</a></li>
-          <li><a href="#">Sección Libre</a></li>
-      </ul>
+    <h4>Oficina Virtual</h4>
+    <ul>
+      <li><a href="#">Programación</a></li>
+      <li><a href="#">Fixtures</a></li>
+      <li><a href="#">Boletines</a></li>
+      <li><a href="#">Formularios</a></li>
+      <li><a href="#">Reglamento</a></li>
+    </ul>
   </div>
 
   <div class="footer-col">
-      <h4>Contacto</h4>
-      <div class="links">
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
+    <h4>Contacto</h4>
+    <div class="links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
   </div>
+
+  <div class="developers-text">
+    <p> @ Developed by Grabobi Fernando <a href="https://portafolio2-0-ngly.vercel.app/?fbclid=PAZXh0bgNhZW0CMTEAAaZW5f22m5YqduCRov4mcIdra7zo18H9U-3Y0h2kQcWPRW_9995V4wX9-bk_aem_I6trd55JIp4OjqSn4TFWbQ" target="_blank" class="social-icon-footer"><i class="fab fa-github" style="color: whitesmoke;"></i></a> 
+        and Rodriguez Luciano <a href="https://bloshftw.github.io/Portafolio2.0/" target="_blank" class="social-icon-footer"><i class="fab fa-github" style="color: whitesmoke;"></i></a>  </p>
+</div>
+
 </footer>
+
 <!--FOOTER-->
 
 

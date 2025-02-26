@@ -1,0 +1,89 @@
+:root {
+    --dorado: #f1bc0d;
+    --rojo: #D91E2E; 
+    --blanco: #fff;
+    --gris: #333;
+  
+    /* Neutros y de apoyo */
+    --gris-claro: #f4f4f4;  /* Fondo de secciones o áreas con poco énfasis */
+    --gris-medium: #7a7a7a; /* Texto secundario o menos importante */
+    --gris-oscuro: #222;    /* Para textos con mucho contraste */
+  }
+
+  /* SECCION HISTORIA */
+/* SECCION HISTORIA */
+.history-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Fondo suave para la sección */
+  }
+  
+  .history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .history-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--rojo);
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .history-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .history-text {
+    font-size: 1.6rem;
+    color: var(--gris);
+    line-height: 1.6;
+    text-align: justify;
+    max-width: 900px;
+  }
+  
+  .history-images {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .history-image {
+    max-width: 45%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .history-image:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Media Queries - Version Móvil */
+  @media (max-width: 768px) {
+    .history-title {
+      font-size: 2rem;
+    }
+  
+    .history-text {
+      font-size: 1.4rem;
+      max-width: 100%;
+    }
+  
+    .history-images {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .history-image {
+      max-width: 90%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
