@@ -48,9 +48,22 @@ table {
 
 th, td {
     text-align: center;
-    padding: 15px;
+    padding: 13px;
     border: 1px solid #ddd;
 }
+
+@media (max-width: 376px) {
+  th, td {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px){
+  th, td {
+    font-size: 10px;
+  }
+}
+
 
 th {
     background-color: red;
