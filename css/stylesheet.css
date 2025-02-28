@@ -67,6 +67,7 @@ body {
   align-items: center;
   z-index: 1001;
   height: 100%;
+  text-decoration: none;
 }
 
 .logo img {
@@ -1176,6 +1177,7 @@ ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin: 0 auto;
 }
 
@@ -1184,6 +1186,17 @@ ul li a:hover {
   color: #bdb6b6;
 
 }
+
+@media (max-width: 640px){
+
+  developers-text{
+    text-align: center;
+    justify-content: center;
+  }
+
+}
+  
+
 
 /*DEVELOPERS TEXT*/
 
