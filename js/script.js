@@ -231,5 +231,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
   stats.forEach(stat => observer.observe(stat));
 });
-
-
