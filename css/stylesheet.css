@@ -160,10 +160,7 @@ html {
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: 
-    opacity 0.2s ease,
-    transform 0.2s ease,
-    visibility 0s 0.2s;
+  transition: none;
   z-index: 1000;
   list-style: none;
   padding: 0.5rem 0;
@@ -291,8 +288,38 @@ html {
   top: 14px;
 }
 
+/* Media Queries para Responsive notebook */
+
+@media (max-width: 1024px){
+.nav-container {
+  padding: 0 0.5rem; /* Menos padding para 1024px */
+}
+
+.main-menu > li > a {
+  padding: 0 0.5rem;
+  font-size: 0.9rem;
+}
+
+.logo img {
+  height: 35px;
+}
+
+.logo span {
+  font-size: 0.9rem;
+}
+
+.dropdown-menu {
+  min-width: 180px;
+}
+
+.dropdown-menu a {
+  font-size: 0.85rem; /* Cambia este valor al tamaño deseado */
+}
+
+}
+
 /* Media Queries para Responsive */
-@media (max-width: 1102px) {
+@media (max-width: 768px) {
   .mobile-toggle {
     display: block;
   }
