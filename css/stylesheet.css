@@ -15,6 +15,10 @@ body {
 
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 html {
   overflow-x: hidden;
 
@@ -49,12 +53,16 @@ html {
   --menu-height: 60px;
 }
 
+main {
+  margin-top: var(--menu-height);
+}
+
 /* Base y Layout */
 .header {
   background-color: var(--bg-light);
   box-shadow: var(--shadow);
-  position: relative;
-  z-index: 1000;
+  position: fixed;
+  z-index: 1000000;
   width: 100%;
 }
 
@@ -85,7 +93,7 @@ html {
 
 .logo span {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: var(--text-color);
 }
 
@@ -119,12 +127,16 @@ html {
   color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
-  transition: var(--transition);
+  transition: none;
   white-space: nowrap;
 }
 
 .main-menu > li > a:hover {
   color: var(--primary-color);
+}
+
+.main-menu > li > a:focus {
+  outline: none;
 }
 
 /* Dropdown Base */
@@ -174,10 +186,7 @@ html {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
-  transition: 
-    opacity 0.2s ease,
-    transform 0.2s ease,
-    visibility 0s 0s;
+  transition: none;
 }
 
 .dropdown:hover > .dropdown-toggle .dropdown-icon,
@@ -196,7 +205,7 @@ html {
   padding: 0.5rem 1rem;
   color: var(--text-color);
   text-decoration: none;
-  transition: var(--transition);
+  transition: none;
   white-space: nowrap;
 }
 
@@ -316,10 +325,12 @@ html {
   font-size: 0.85rem; /* Cambia este valor al tamaño deseado */
 }
 
+
+
 }
 
 /* Media Queries para Responsive */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .mobile-toggle {
     display: block;
   }
@@ -329,10 +340,9 @@ html {
     top: var(--menu-height);
     left: -100%;
     width: 280px;
-    height: calc(100vh - var(--menu-height));
+    height: calc(100vh - var(--menu-height)); /* Altura restante */
     background-color: var(--bg-light);
     box-shadow: var(--shadow);
-    transition: left 0.3s ease;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;

@@ -18,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Bloquear/desbloquear scroll del body
     if (navWrapper.classList.contains('active')) {
-      document.body.style.overflow = 'hidden';
+      document.body.classList.add('no-scroll');
     } else {
-      document.body.style.overflow = '';
+      document.body.classList.remove('no-scroll');
       
       // Reset de todos los submenús al cerrar
       resetAllDropdowns();
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Manejar los dropdowns en móvil
   dropdownToggles.forEach(toggle => {
     toggle.addEventListener('click', function(e) {
-      if (window.innerWidth <= 991) {
+      if (window.innerWidth <= 768) {
         e.preventDefault();
         
         // Obtener el dropdown-menu asociado a este toggle
@@ -76,8 +76,16 @@ document.addEventListener('DOMContentLoaded', function () {
           });
         }
         
+        document.querySelectorAll('.main-menu > li > a').forEach(link => {
+          link.addEventListener('click', function(e) {
+            // Se ejecuta la lógica del click, luego se remueve el foco.
+            this.blur();
+          });
+        });
+
         // Toggle para este dropdown específico
         this.classList.toggle('active');
+        this.blur();
         if (dropdownMenu) {
           dropdownMenu.classList.toggle('show');
         }
