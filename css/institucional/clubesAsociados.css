@@ -30,6 +30,10 @@ body {
 
   /*Tabla de Instituciones*/
 /*Tabla de Instituciones*/
+.table-container {
+  width: 100%;
+  overflow-x: auto; 
+}
 
 h2 {
   text-align: center;
@@ -51,7 +55,20 @@ th, td {
     padding: 13px;
     border: 1px solid #ddd;
 }
+/* Media Query para pantallas menores a 768px */
+@media (max-width: 768px) {
+  th, td {
+      font-size: 14px;
+      padding: 8px;
+  }
+}
 
+@media (max-width: 480px) {
+  th, td {
+      font-size: 12px;
+      padding: 6px;
+  }
+}
 @media (max-width: 376px) {
   th, td {
     font-size: 12px;
