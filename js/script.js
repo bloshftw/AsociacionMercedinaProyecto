@@ -85,9 +85,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Toggle para este dropdown específico
         this.classList.toggle('active');
-        this.blur();
         if (dropdownMenu) {
           dropdownMenu.classList.toggle('show');
+        }
+        // Toggle the dropdown icon rotation
+        const dropdownIcon = this.querySelector('.dropdown-icon');
+        if (dropdownIcon) {
+          dropdownIcon.style.transform = dropdownIcon.style.transform === 'rotate(180deg)' ? 'rotate(0)' : 'rotate(180deg)';
         }
         this.blur();
       }
