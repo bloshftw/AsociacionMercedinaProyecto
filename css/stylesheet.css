@@ -185,9 +185,10 @@ main {
 .dropdown:focus-within > .dropdown-menu {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: none;
   transition: none;
 }
+
 
 .dropdown:hover > .dropdown-toggle .dropdown-icon,
 .dropdown:focus-within > .dropdown-toggle .dropdown-icon {
@@ -208,6 +209,7 @@ main {
   transition: none;
   white-space: nowrap;
 }
+
 
 .dropdown-menu a:hover {
   background-color: rgba(0, 0, 0, 0.05);
@@ -268,7 +270,7 @@ main {
   background-color: var(--text-color);
   position: absolute;
   left: 3px;
-  transition: var(--transition);
+  transition: none;
 }
 
 .mobile-toggle span:nth-child(1) {
@@ -296,6 +298,7 @@ main {
   transform: rotate(-45deg);
   top: 14px;
 }
+
 
 /* Media Queries para Responsive notebook */
 
