@@ -1229,8 +1229,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   margin-top: auto;
-  justify-content: space-between;
-  align-items: flex-start;
   background-color: #2d2e33;
   padding-top: 60px;
   padding-bottom: 40px;
@@ -1238,9 +1236,8 @@ footer {
 }
 
 .footer-logo {
-  flex: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 20%;
   min-width: 200px;
@@ -1393,7 +1390,6 @@ ul li a:hover {
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  width: 100%;
 }
 
 .developers-text p{

@@ -1,34 +1,4 @@
-* {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  list-style: none;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-}
 
-body {
-  padding: 0;
-  margin: 0;
-}
-
-
-
-  
-  /*MENU Y HAMBURGUESA*/
-  
-  /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-  
-
-
-
-
-
-
-
-
-
-
-  /*Tabla de Instituciones*/
 /*Tabla de Instituciones*/
 .table-container {
   width: 100%;
@@ -208,7 +178,7 @@ td img {
   
   ul li a:hover {
     color: white;
-    padding-left: 8px;
+    
   }
   
   .links {
